@@ -15,7 +15,7 @@ async def paypal_webhook(request: Request):
 
     # VERIFY WEBHOOK AUTHENTICITY
     verification = await verify_webhook(headers, body)
-    
+    print("VERIFICATION:", verification)
     # IF WEBHOOK IS NOT "SUCCESS"
     if verification.get("verification_status") != "SUCCESS":
         raise HTTPException(status_code=400, detail="Invalid PayPal webhook")
