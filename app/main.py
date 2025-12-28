@@ -13,12 +13,16 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:5173", #vite dev server
+        "https://registration-payment-form.vercel.app/", #vite dev server
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/healthz")
+def health_check():
+    return {"status":"ok"}
 
 app.include_router(orders_router)
 app.include_router(webhooks_router)
