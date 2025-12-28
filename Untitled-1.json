@@ -1,0 +1,73 @@
+{
+    "create_time": "2025-12-26T22: 10: 11Z",
+    "purchase_units": [
+        {
+            "reference_id": "default",
+            "amount": {
+                "currency_code": "USD",
+                "value": "75.00",
+                "breakdown": {}
+            },
+            "payee": {
+                "email_address": "sb-henzx48227253@business.example.com",
+                "merchant_id": "EHNACUYQGLXYJ"
+            },
+            "shipping": {
+                "name": {
+                    "full_name": "John Doe"
+                },
+                "address": {
+                    "address_line_1": "1 Main St", "admin_area_2": "San Jose", "admin_area_1": "CA", "postal_code": "95131", "country_code": "US"
+                }
+            },
+            "supplementary_data": {
+                "tax_nexus": []
+            }
+        }
+    ],
+    "links": [
+        {
+            "href": "https: //api.sandbox.paypal.com/v2/checkout/orders/2F269687SH7191255",
+            "rel": "self",
+            "method": "GET"
+        },
+        {
+            "href": "https: //api.sandbox.paypal.com/v2/checkout/orders/2F269687SH7191255",
+            "rel": "update",
+            "method": "PATCH"
+        },
+        {
+            "href": "https: //api.sandbox.paypal.com/v2/checkout/orders/2F269687SH7191255/capture",
+            "rel": "capture",
+            "method": "POST"
+        }
+    ],
+    "id": "2F269687SH7191255",
+    "payment_source": {
+        "paypal": {
+            "email_address": "sb-qikkp48158479@personal.example.com",
+            "account_id": "7FXFV3G5H4LAE",
+            "account_status": "VERIFIED",
+            "name": {
+                "given_name": "John",
+                "surname": "Doe"
+            },
+            "address": {
+                "country_code": "US"
+            }
+        }
+    },
+    "intent": "CAPTURE",
+    "payer": {
+        "name": {
+            "given_name": "John",
+            "surname": "Doe"
+        },
+        "email_address": "sb-qikkp48158479@personal.example.com",
+        "payer_id": "7FXFV3G5H4LAE",
+        "address": {
+            "country_code": "US"
+        }
+    },
+    "status": "APPROVED"
+}
