@@ -13,7 +13,9 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://registration-payment-form.vercel.app/", #vite dev server
+        "https://registration-payment-form-c98899p8p-cramos2003s-projects.vercel.app",
+        "https://registration-payment-form.vercel.app", # vite dev server
+        "http://localhost:5173" # local dev
     ],
     allow_credentials=True,
     allow_methods=["*"],
